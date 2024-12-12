@@ -1,12 +1,13 @@
+# importing important modules
 import streamlit as st
 import google.generativeai as genai
 from typing import List, Dict
 import os
 from dotenv import load_dotenv
 
-# Load environment variables
+# Loading environment variables
 load_dotenv()
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")  # Loaded from .env
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")  # Loaded from .env! 
 
 class SocraticChatbot:
     def __init__(self):
@@ -27,6 +28,8 @@ class SocraticChatbot:
         6. Acknowledge and build upon student responses
         7. Challenge assumptions respectfully
         8. Maintain focus on the core topic while exploring related ideas
+        9. If they answer correctly, Congratulate them
+        10. Don't end the conversation until a user does so
 
         Always respond in this format:
         1. Brief reflection on the student's last response 
